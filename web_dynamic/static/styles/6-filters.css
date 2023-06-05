@@ -40,18 +40,27 @@ button:hover {
     margin-top: 0;
     font-weight: 400;
     font-size: 14px;
+    display: inline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 2rem;
 }
 .locations {
     height: 100%;
     width: 25%;
     border-right: 1px solid #DDDDDD;
+    position: relative;
 }
 .amenities {
     height: 100%;
     width: 25%;
+    position: relative;
 }
 
 .popover {
+    position: absolute;
+    top: 100%;
     visibility: hidden;
     width: 100%;
     border: 1px solid #DDDDDD;
@@ -100,4 +109,7 @@ button:hover {
 .amenities:hover .popover,
 .locations:hover .popover {
     visibility: visible;
+}
+.popover > ul > li > input {
+    margin-right: 10px;
 }
